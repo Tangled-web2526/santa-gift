@@ -223,9 +223,7 @@
       <h3>You are the Secret Santa for:</h3>
       <div class="name" id="receiverName">Loading...</div>
       <div class="tip">
-        🤫 <b>Shh... Keep it a total secret!</b><br>
-        📅 Exchange Date: <b>Dec 18th (3:00 - 6:00 PM)</b><br>
-        💰 Budget: <b>INR 500 – INR 1,000</b>
+        🤫 <b>Shh... Keep it a total secret!</b>
       </div>
     </div>
   </div>
@@ -241,7 +239,7 @@
       flake.className = 'snowflake';
       flake.textContent = snowIcons[Math.floor(Math.random() * snowIcons.length)];
       flake.style.left = Math.random() * 100 + 'vw';
-      flake.style.animationDuration = (Math.random() * 5 + 6) + 's'; // 6s - 11s duration
+      flake.style.animationDuration = (Math.random() * 5 + 6) + 's';
       flake.style.animationDelay = (Math.random() * 5) + 's';
       flake.style.fontSize = (Math.random() * 1.1 + 0.8) + 'rem';
       flake.style.opacity = Math.random() * 0.7 + 0.3;
@@ -254,10 +252,8 @@
       const val = urlParams.get('k');
       if (!val) return "A Wonderful Colleague! 🎄";
       try {
-        // Try Base64 decode with UTF-8
         return decodeURIComponent(escape(atob(val)));
       } catch (e) {
-        // Fallback to plain text
         return decodeURIComponent(val);
       }
     }
@@ -273,7 +269,7 @@
       document.body.classList.add('opened');
       document.getElementById('subtext').textContent = "🎉 Ho Ho Ho! Your match is revealed! 🎉";
 
-      // Festive Confetti burst (Gold, Red, Green, White)
+      // Festive Confetti burst
       confetti({
         particleCount: 140,
         spread: 85,
